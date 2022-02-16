@@ -1,0 +1,120 @@
+
+<Login>
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Login de Usuário'
+        TextInput:
+            hint_text: 'CPF'
+            id: txt_num
+        TextInput:
+            hint_text: 'Senha'
+            id: txt_num
+        Label:
+            text: 'Login de Usuário'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Entrar'
+            on_press: root.manager.current= 'Main'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Cadastrar'
+            on_press: root.manager.current= 'CadUser'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Esqueci a senha'
+            on_press: root.manager.current= 'EsqSenha'
+
+
+
+<Main>
+    BoxLayout:
+
+        orientation: 'vertical'
+        Label:
+            text: 'Bem vindo. Escolha uma opção para continuar'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Relatório de prestação de contas'
+            on_press: root.manager.current= 'EsqSenha'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Relatório personalizado'
+            on_press: root.manager.current= 'EsqSenha'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Cadastrar bovino'
+            on_press: root.manager.current= 'CadBov'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Atualizar bovino'
+            on_press: root.manager.current= 'EsqSenha'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Excluir bovino'
+            on_press: root.manager.current= 'EsqSenha'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Voltar'
+            on_press: root.manager.current= 'Login'
+
+<CadUser>
+    BoxLayout:
+        orientation: 'vertical'
+
+        TextInput:
+            hint_text: 'Nome'
+            id: txt_nome
+        TextInput:
+            hint_text: 'CPF'
+        TextInput:
+            hint_text: 'Senha'
+        TextInput:
+            hint_text: 'Pergunta secreta'
+        TextInput:
+            hint_text: 'Resposta secreta'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Cadastrar'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Cancelar'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Voltar'
+            on_press: root.manager.current= 'Login'
+
+
+<EsqSenha>
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'OPSS'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Voltar ao menu'
+            on_press: root.manager.current= 'Main'
+<CadBov>
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            hint_text: 'Número'
+        TextInput:
+            hint_text: 'Sexo'
+        TextInput:
+            hint_text: 'Data de Nascimento'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Cadastar'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Cancelar'
+        Button:
+            size_hint: (1, 0.4)
+            text: 'Voltar'
+            on_press: root.manager.current = 'Main'
+<RelGeral>
+    BoxLayout:
+        orientation: 'vertical'
+
+    TextInput:
