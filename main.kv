@@ -47,12 +47,16 @@
             on_press: root.manager.current= 'CadBov'
         Button:
             size_hint: (1, 0.4)
+            text: 'Selecionar Bovino'
+            on_press: root.manager.current= 'SelBov'
+        Button:
+            size_hint: (1, 0.4)
             text: 'Atualizar bovino'
-            on_press: root.manager.current= 'EsqSenha'
+            on_press: root.manager.current= 'AtuBov'
         Button:
             size_hint: (1, 0.4)
             text: 'Excluir bovino'
-            on_press: root.manager.current= 'EsqSenha'
+            on_press: root.manager.current= 'DelBov'
         Button:
             size_hint: (1, 0.4)
             text: 'Voltar'
@@ -118,3 +122,59 @@
         orientation: 'vertical'
 
     TextInput:
+<SelBov>
+    BoxLayout:
+        orientation: 'vertical'
+
+        TextInput:
+            hint_text: 'Número'
+        Label:
+            text: 'Sexo'
+
+        Label:
+            text: 'Idade'
+        Label:
+            text: 'Data de Nascimento'
+<AtuBov>
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Número'
+        TextInput:
+            hint_text: 'Número'
+        TextInput:
+            hint_text: 'Sexo'
+        TextInput:
+            hint_text: 'Data de nascimento'
+        Label:
+            text: 'Esperando Interação'
+        Button:
+            text: 'Selecionar Bovino'
+        Button:
+            text: 'Atualizar bovino'
+        Button:
+            text: 'Voltar'
+            on_press: root.manager.current = 'Main'
+<DelBov>
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            hint_text: 'Número'
+
+        Label:
+            text: 'Número'
+        Label:
+            text: 'Sexo'
+        Label:
+            text: 'Idade'
+        Button:
+            text: 'Selecionar Bovino'
+        Button:
+            text: 'Excluir Bovino'
+        Button:
+            text: 'Voltar'
+            on_press: root.manager.current = 'Main'
+
+
+
